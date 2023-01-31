@@ -1,0 +1,160 @@
+.section {
+	// .section__hero
+
+	&__hero {
+		margin-top: 61px;
+	}
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 65px;
+	@media (max-width: $breakpoint992) {
+		gap: 30px;
+	}
+	@media (max-width: $breakpoint768) {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	// .hero__item
+	&__item {
+		&.right__item {
+			display: flex;
+		}
+		&.left__item {
+			flex: 0 1 416px;
+			@media (max-width: $breakpoint1200) {
+				flex: 0 1 48%;
+			}
+		}
+	}
+	.hero__img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		@media (max-width: $breakpoint1200) {
+			max-width: 500px;
+		}
+	}
+	// .hero__title
+
+	&__title {
+		display: block;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 110%;
+		// margin-top: 100px;
+		/* or 66px */
+
+		letter-spacing: -0.03em;
+
+		color: #1d2736;
+		div {
+			color: #f0998d;
+		}
+		@media (max-width: $breakpoint1200) {
+			font-size: 40px;
+		}
+	}
+
+	// .hero__text
+
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 180%;
+		margin-top: 16px;
+
+		color: #677487;
+		@media (max-width: $breakpoint1200) {
+			font-size: 16px;
+		}
+	}
+
+	// .hero__form
+
+	&__form {
+		margin-top: 32px;
+	}
+
+	// .hero__input
+
+	&__input {
+		width: 100%;
+		background: #ffffff;
+		border: 1px solid #dfe8fa;
+		border-radius: 15px;
+		padding: 14px 22px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 180%;
+
+		color: #677487;
+		&:focus {
+			outline: none;
+			border: 1px solid $primary;
+			color: $primary;
+		}
+		&:hover {
+			cursor: pointer;
+			border: 1px solid $primary;
+		}
+	}
+}
+.form {
+	// .form__btns
+
+	&__btns {
+		display: flex;
+		margin-top: 16px;
+		align-items: center;
+	}
+}
+.btn {
+	// .btn__text
+
+	&__text {
+		margin-left: 30px;
+		max-width: 140px;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 146%;
+		color: #bbc0c7;
+	}
+}
+.rating {
+	margin-top: 32px;
+	display: flex;
+	// .rating__text
+
+	&__text {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 180%;
+		color: #677487;
+		margin-left: 10px;
+		@media (max-width: $breakpoint768) {
+			font-size: 12px;
+		}
+	}
+
+	@media (max-width: $breakpoint768) {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.logos {
+	margin-top: 16px;
+	display: flex;
+	max-width: 356px;
+	justify-content: space-between;
+	gap: 5px;
+	@media (max-width: $breakpoint768) {
+		flex-wrap: wrap;
+		justify-content: center;
+		// flex-direction: column;
+	}
+}

@@ -1,0 +1,102 @@
+// Container
+.container {
+	max-width: ($containerWidth + $containerPadding) + px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (max-width: $breakpoint1450) {
+		max-width: 1200px;
+		padding: 0 10px;
+	}
+	@media (max-width: $breakpoint1200) {
+		padding: 0 $containerSidePadding + px;
+	}
+	@media (max-width: $breakpoint992) {
+		max-width: 970px;
+	}
+
+	@media (max-width: $breakpoint768) {
+		max-width: 740px;
+	}
+
+	@media (max-width: $breakpoint480) {
+		max-width: none;
+	}
+}
+
+// Body Locked
+body {
+	&.locked {
+		overflow: hidden;
+	}
+	font-family: "Poppins", sans-serif;
+}
+.rounded {
+	// .rounded__btn
+
+	&__btn {
+		@media (max-width: $breakpoint768) {
+			display: none;
+			&.active {
+				display: block;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 3;
+				border-radius: 0;
+			}
+		}
+		padding: 12px 24px;
+		background: #fff0ec;
+		border-radius: 50px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 160%;
+		/* identical to box height, or 26px */
+
+		text-align: center;
+		transition: 0.3s all;
+		color: #fd7461;
+		&:hover {
+			background: #fd7461;
+			color: #fff0ec;
+			scale: 105%;
+		}
+	}
+}
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 144.64px;
+	height: 59px;
+	background: #f0998d;
+	box-shadow: 0px 16px 40px rgba(255, 188, 166, 0.33);
+	border-radius: 15px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 27px;
+	transition: 0.3s all;
+	color: #ffffff;
+	&:hover {
+		background: #fd7461;
+		color: #fff0ec;
+		scale: 105%;
+	}
+}
+
+.select {
+}
+// Animations
+// Fade
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
