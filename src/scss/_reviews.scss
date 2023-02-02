@@ -1,0 +1,144 @@
+.section {
+	// .section__reviews
+
+	&__reviews {
+		margin-top: 40px;
+		background: #fffafe;
+		padding-top: 160px;
+		padding-bottom: 470px;
+		@media (max-width: $breakpoint992) {
+			padding-top: 90px;
+		}
+	}
+}
+
+.reviews {
+	position: relative;
+
+	.slide {
+		// .slide__btn
+
+		&__btn {
+			background: none;
+			z-index: 11;
+			position: absolute;
+			&.swiper-button-disabled {
+				line,
+				circle {
+					stroke: #b8bcc1;
+				}
+			}
+			@media (max-width: $breakpoint768) {
+				top: unset;
+				bottom: -20px;
+			}
+		}
+	}
+	.prev {
+		// .prev__btn
+
+		&__btn {
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+	.next {
+		// .next__btn
+
+		&__btn {
+			right: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+.slide {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	max-width: 1000px;
+	margin: 0 auto;
+	@media (max-width: $breakpoint1200) {
+		max-width: 100%;
+		padding: 0 100px 0 50px;
+	}
+
+	@media (max-width: $breakpoint992) {
+		gap: 10px;
+	}
+	@media (max-width: $breakpoint768) {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 50px 0 50px;
+	}
+	// .slide__avatar
+	&__avatar {
+		position: relative;
+
+		.play {
+			// .play__btn
+
+			&__btn {
+				position: absolute;
+				right: 40px;
+				bottom: 40px;
+				@media (max-width: $breakpoint992) {
+					width: 80px;
+					height: 80px;
+				}
+			}
+		}
+		.avatar__img {
+			@media (max-width: $breakpoint992) {
+				width: 300px;
+				height: 300px;
+			}
+		}
+	}
+
+	// .slide__info
+
+	&__info {
+		@media (max-width: $breakpoint768) {
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// .slide__name
+
+	&__name {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 180%;
+		/* or 32px */
+
+		color: #1d2736;
+	}
+
+	// .slide__text
+
+	&__text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 180%;
+		/* or 32px */
+
+		color: #1d2736;
+		margin-top: 24px;
+		@media (max-width: $breakpoint992) {
+			font-size: 16px;
+		}
+	}
+
+	// .slide__icon
+
+	&__icon {
+		margin-top: 16px;
+	}
+}

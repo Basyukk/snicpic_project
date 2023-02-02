@@ -2,6 +2,12 @@
 	padding-top: 100px;
 	padding-bottom: 140px;
 	background: #fdf9f8;
+	margin: 40px;
+
+	@media (max-width: $breakpoint768) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 }
 
 .tabs {
@@ -53,6 +59,7 @@
 	@media (max-width: $breakpoint768) {
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 30px;
 	}
 	// .tab__item
 
@@ -89,6 +96,9 @@
 		@media (max-width: $breakpoint992) {
 			font-size: 36px;
 		}
+		@media (max-width: $breakpoint480) {
+			font-size: 26px;
+		}
 	}
 
 	// .tab__text
@@ -124,6 +134,10 @@
 		display: flex;
 		margin-top: 20px;
 		gap: 16px;
+		@media (max-width: $breakpoint480) {
+			flex-wrap: wrap;
+			gap: 10px;
+		}
 	}
 
 	// .tab__tag
